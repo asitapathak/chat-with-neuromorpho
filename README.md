@@ -4,8 +4,6 @@ Ask plain-English questions about 250,000 digitally reconstructed neurons and gl
 
 **Live demo:** _add your Streamlit link here_
 
-![Chat page](docs/chat.png)
-![Dataset page](docs/dataset.png)
 
 ## What it does
 
