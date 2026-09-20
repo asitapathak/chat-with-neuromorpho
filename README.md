@@ -2,7 +2,7 @@
 
 Ask plain-English questions about 250,000 digitally reconstructed neurons and glia. Every answer comes with an automatic chart, the SQL behind it, and the reference notes it used.
 
-**Live demo:** _add your Streamlit link here_
+**Live demo:** https://chat-with-neuromorpho.streamlit.app/ 
 
 
 ## What it does
