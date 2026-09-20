@@ -1,8 +1,8 @@
-streamlit
-pandas
-duckdb
-plotly
-chromadb
-google-genai
-python-dotenv
+chromadb==1.5.9
+duckdb==1.5.5
+google-genai==2.24.0
+pandas==3.0.6
+plotly==7.1.0
+python-dotenv==1.2.3
+streamlit==1.64.0
 pysqlite3-binary; sys_platform == "linux"
