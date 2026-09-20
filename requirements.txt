@@ -1,0 +1,8 @@
+streamlit
+pandas
+duckdb
+plotly
+chromadb
+google-genai
+python-dotenv
+pysqlite3-binary; sys_platform == "linux"

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #0B0F1A; --card: rgba(255,255,255,.035); --line: rgba(255,255,255,.08);
+  --text: #E6EAF2; --muted: #94A0BC; --accent: #7C9CFF; --teal: #5EEAD4;
+}
+
+.stApp {
+  font-family: 'Inter', sans-serif;
+  background:
+    radial-gradient(1100px 520px at 8% -8%, rgba(124,156,255,.16), transparent 60%),
+    radial-gradient(900px 480px at 100% 0%, rgba(94,234,212,.10), transparent 55%),
+    var(--bg);
+}
+#MainMenu, footer, [data-testid="stDecoration"] { display: none; }
+.block-container { max-width: 1120px; padding-top: 2rem; padding-bottom: 6rem; }
+
+/* Hero */
+.hero { margin: .4rem 0 1.8rem; }
+.hero .eyebrow { color: var(--teal); font-size: .72rem; letter-spacing: .18em; font-weight: 600; }
+.hero h1 {
+  font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 3.2rem; line-height: 1.08;
+  margin: .55rem 0 .7rem; padding: 0;
+  background: linear-gradient(90deg, #fff 0%, #B9C8FF 55%, #5EEAD4 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero p { color: var(--muted); font-size: 1.05rem; max-width: 660px; line-height: 1.6; margin: 0; }
+
+/* Cards and pills */
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 1.1rem 1.3rem; margin-bottom: 1rem; height: calc(100% - 1rem);
+}
+.card h4 { margin: 0 0 .4rem; font-size: 1rem; font-weight: 600; color: var(--text); padding: 0; }
+.card p { margin: 0; color: var(--muted); font-size: .93rem; line-height: 1.6; }
+.card-eyebrow { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin: 0 0 .35rem .15rem; font-weight: 600; }
+.pill {
+  display: inline-block; padding: .28rem .75rem; border-radius: 999px; font-size: .8rem; margin: .15rem .3rem .15rem 0;
+  border: 1px solid rgba(124,156,255,.35); background: rgba(124,156,255,.10); color: #B9C8FF;
+}
+
+/* Chat */
+[data-testid="stChatMessage"] {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+  padding: 1rem 1.25rem; margin-bottom: .9rem;
+}
+[data-testid="stChatInput"] { border-radius: 16px; }
+
+/* Buttons (starter cards) */
+.stButton > button {
+  border-radius: 14px; border: 1px solid var(--line); background: var(--card);
+  min-height: 92px; height: auto; padding: .9rem 1rem; text-align: left; justify-content: flex-start;
+  white-space: normal; line-height: 1.45; transition: all .18s ease;
+}
+.stButton > button:hover { border-color: var(--accent); background: rgba(124,156,255,.08); transform: translateY(-2px); }
+
+/* Metrics, tabs, expanders, tables */
+[data-testid="stMetric"] { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.25rem; }
+[data-testid="stMetricLabel"] { color: var(--muted); }
+[data-testid="stMetricValue"] { font-family: 'DM Serif Display', serif; font-size: 2rem; }
+.stTabs [data-baseweb="tab-list"] { gap: 6px; }
+.stTabs [data-baseweb="tab"] { border-radius: 10px; padding: 8px 16px; }
+[data-testid="stExpander"] { border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
+h5 { color: var(--muted); font-weight: 500; letter-spacing: .02em; }
+#visual design 
+
+/* ---- refinements ---- */
+.block-container { padding-top: 4.5rem; }
+.stButton > button { min-height: 0; padding: .5rem 1rem; }
+[class*="st-key-starter"] button { min-height: 96px; padding: .9rem 1rem; }
+.stButton button p, .stButton button div {
+  white-space: normal !important; overflow: visible !important;
+  text-overflow: clip !important; text-align: left;
+}
+[data-testid="stBottomBlockContainer"] { max-width: 1120px; margin: 0 auto; }
+
+/* ---- top bar spacing ---- */
+[data-testid="stHeader"] {
+  background: rgba(11,15,26,.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.hero { margin-top: 3.2rem !important; }

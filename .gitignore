@@ -1,0 +1,22 @@
+# secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# environments and caches
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+
+# data: only the compact Parquet file and the notes ship with the repo
+data/raw/
+data/clean/
+data/chroma/
+*.duckdb
+*.duckdb.wal
+*.jsonl
+*.csv

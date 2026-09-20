@@ -1,0 +1,142 @@
+[
+  {
+    "topic": "about NeuroMorpho",
+    "text": "NeuroMorpho.Org is a public archive of digitally reconstructed neurons contributed by many research labs. Each reconstruction is a 3D tracing of a neuron's branching structure, with measurements computed from it."
+  },
+  {
+    "topic": "neuron basics",
+    "text": "A neuron is a nerve cell made of a cell body (soma), branched receiving extensions called dendrites, and usually one long output fiber called the axon."
+  },
+  {
+    "topic": "soma",
+    "text": "The soma is the cell body, which contains the nucleus. In this table soma_surface is the surface area of the traced soma in square micrometers. Soma size varies a lot between cell types and species."
+  },
+  {
+    "topic": "dendrites",
+    "text": "Dendrites are the branched extensions that receive signals from other neurons. Their branching pattern shapes how a neuron collects input, so branch counts and total length are common ways to describe dendritic complexity."
+  },
+  {
+    "topic": "axon",
+    "text": "The axon is typically a single long fiber that carries signals away from the soma. Some reconstructions include the axon and others contain only dendrites, so totals like total_length may not compare the same parts of the neuron."
+  },
+  {
+    "topic": "total_length",
+    "text": "total_length is the summed length of all traced segments of a reconstruction, in micrometers. It grows with neuron size and with how completely the branches were traced, so incomplete or truncated tracings look smaller."
+  },
+  {
+    "topic": "branch_count",
+    "text": "branch_count is the number of branches, where a branch is a stretch of neurite between two branching points or between a branching point and a tip. More branches generally means a more complex arbor, but a long neuron with few branches can still have a large total_length."
+  },
+  {
+    "topic": "bifurcation_count",
+    "text": "bifurcation_count is the number of points where a neurite splits into two daughter branches. It is closely related to branch_count, since each bifurcation adds branches."
+  },
+  {
+    "topic": "stem_count",
+    "text": "stem_count is the number of primary neurites leaving the soma. It varies by cell type: some neurons have one main dendrite, others have many."
+  },
+  {
+    "topic": "surface_area",
+    "text": "surface_area is the total membrane surface area of the traced neurites, in square micrometers. It grows with both length and thickness, and it depends on how accurately diameters were traced."
+  },
+  {
+    "topic": "avg_diameter",
+    "text": "avg_diameter is the mean thickness of the traced neurite segments, in micrometers. It depends on how much of the fine distal branches were captured, so tracing quality affects it."
+  },
+  {
+    "topic": "fractal_dim",
+    "text": "fractal_dim (fractal dimension) summarizes how completely a branching structure fills space. Higher values mean a more intricate, space-filling arbor. It is less tied to absolute size than length or surface area."
+  },
+  {
+    "topic": "units",
+    "text": "Lengths and diameters are in micrometers and areas in square micrometers. Counts (branches, bifurcations, stems) have no units. Averages over a whole species or region mix different cell types, so read them as rough summaries."
+  },
+  {
+    "topic": "pyramidal cells",
+    "text": "Pyramidal cells are excitatory neurons with a roughly triangular soma, a prominent apical dendrite and several basal dendrites. They are the most common neuron type in the cortex and hippocampus."
+  },
+  {
+    "topic": "interneurons",
+    "text": "Interneurons are mostly local neurons, and many of them inhibit other neurons. They include types such as basket cells, and many have shorter-range dendrites and axons than pyramidal cells."
+  },
+  {
+    "topic": "neocortex",
+    "text": "The neocortex is the layered outer sheet of the mammalian brain, organized in six layers and involved in perception, movement and cognition. It is one of the most heavily represented regions in this dataset."
+  },
+  {
+    "topic": "hippocampus",
+    "text": "The hippocampus is a brain region central to memory and spatial navigation. Well-studied cell types there include CA1 and CA3 pyramidal cells and dentate granule cells."
+  },
+  {
+    "topic": "cerebellum",
+    "text": "The cerebellum helps coordinate movement. It contains Purkinje cells, which have very large, flat, densely branched dendritic trees."
+  },
+  {
+    "topic": "species differences",
+    "text": "Neuron size and shape differ across species, but observed differences also reflect which brain regions, cell types and ages were sampled. Species averages in this dataset should not be read as clean species-level biology."
+  },
+  {
+    "topic": "caveat: sampling",
+    "text": "The data is a collection of reconstructions contributed by many labs, not a random sample of neurons. Species, regions and cell types are unevenly represented, so groups with few neurons give unreliable averages."
+  },
+  {
+    "topic": "caveat: methods",
+    "text": "Reconstructions differ in staining method, tissue slicing, tracing software and completeness. Slicing can cut off branches and tissue shrinkage changes sizes, so length-related measurements can differ between labs for reasons unrelated to biology."
+  },
+  {
+    "topic": "caveat: coverage",
+    "text": "This project's table holds the species that downloaded successfully. About 41 species with multi-word names, mostly small ones, are missing because of an API naming issue. The dataset info page lists exactly which species are included."
+  },
+  {
+    "topic": "caveat: interpretation",
+    "text": "Differences between groups here are descriptive. They do not show that a species or region causes a morphology difference, because lab methods and cell types are mixed. When comparing groups, look at sample sizes, not only averages."
+  },
+  {
+    "topic": "about the builder",
+    "text": "This app was built by Asita, a master's student in data science and big data analytics with an applied research interest in neuroscience and neuroimaging."
+  },
+  {
+    "topic": "why this project",
+    "text": "Asita built Chat with NeuroMorpho as a portfolio project that combines data engineering, natural-language querying and generative AI on real neuroscience data, so anyone can ask plain-English questions about neuron shapes across species and brain regions."
+  },
+  {
+    "topic": "why neuroscience",
+    "text": "Asita's interest in neuroscience comes from wanting to apply data science methods to brain data. Neuron morphology is a natural fit because it turns the brain's cell-level structure into measurements that can be queried and compared."
+  },
+  {
+    "topic": "skills: data engineering",
+    "text": "For this project Asita used Python and pandas to pull about 250,000 neuron records and their measurements from the NeuroMorpho.Org API, then cleaned and merged them and stored them in a DuckDB database."
+  },
+  {
+    "topic": "skills: generative AI",
+    "text": "The assistant uses Google's Gemini API with function calling. The model writes SQL against the DuckDB table (read-only, SELECT statements only) and looks up reference notes in a ChromaDB vector database, so numbers come from the data rather than from the model's memory."
+  },
+  {
+    "topic": "skills: wider toolkit",
+    "text": "Beyond this project, Asita has worked with Python tools across several areas: OpenCV and NumPy for image analytics, PyTorch and NLTK for natural language processing, and NetworkX and pandas for social network analysis, using Jupyter Notebook and Google Colab."
+  },
+  {
+    "topic": "design choices",
+    "text": "Deliberate design choices: the database is opened read-only, every average is reported with its sample size, and answers are grounded in query results and reference notes rather than free-form guesses."
+  },
+  {
+    "topic": "how to read this project",
+    "text": "This is a personal portfolio project, not a peer-reviewed analysis. It demonstrates data engineering and applied AI skills, and its results describe this dataset rather than settled biology."
+  },
+  {
+    "topic": "tools in this project",
+    "text": "Tools used here: Python, pandas, DuckDB, ChromaDB, the Gemini API, Jupyter for development, and a Streamlit and Plotly front end for the chat interface and charts."
+  },
+  {
+    "topic": "caveat: axon included",
+    "text": "Some reconstructions include the axon, and these are much longer. Across this dataset the median total_length is about 4,900 micrometers for reconstructions that include an axon, compared with about 1,300 for dendrite-only ones and about 380 for undifferentiated ones (labelled only as processes or neurites). About 11% of neurons include an axon, and about half are undifferentiated. Because contributing labs differ in what they traced, size comparisons between species or regions can reflect what was traced rather than biology. The trace_type column separates these cases."
+  },
+  {
+    "topic": "caveat: outliers",
+    "text": "Length-related measurements are strongly right-skewed in this dataset, so means can be far above medians. In human neocortex the mean total_length is about 6,100 micrometers but the median is about 1,200. One archive contributes 215 of the 9,823 reconstructions (about 2%) but roughly 59% of the total length, with a maximum near 1.8 million micrometers. Several other large groups, such as mouse neocortex, also have means 5 to 6 times their medians. Medians describe a typical neuron better, so compare groups on medians and treat means with care."
+  },
+  {
+    "topic": "caveat: undifferentiated tracings",
+    "text": "About half of the reconstructions (127,712) are labelled only as processes or neurites, meaning dendrites and axon were not separated. Their median total_length is small (about 380 micrometers), but some are very large: for example 215 human neocortex reconstructions from one archive are labelled as neurites and have a median near 49,500 micrometers. For like-with-like size comparisons, the trace_type 'dendrites only' subset is the cleanest."
+  }
+]
